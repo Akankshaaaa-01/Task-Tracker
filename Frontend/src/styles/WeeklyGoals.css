@@ -1,0 +1,63 @@
+
+/* Weekly Goals paper card */
+.weekly-goals {
+  padding: 20px;
+  background-color: #fffaf1;
+  border: 1px solid #e5dac8;
+  border-radius: 4px;
+  box-shadow: 0 3px 8px rgba(48, 39, 31, 0.06);
+  color: #30271f;
+}
+
+/* Heading and completion count */
+.weekly-goals-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #e5dac8;
+  margin-bottom: 12px;
+}
+
+.weekly-goals-header h2 {
+  font-family: Georgia, serif;
+  font-size: 20px;
+  font-weight: normal;
+}
+
+.weekly-goals-header span {
+  font-family: Georgia, serif;
+  font-size: 11px;
+  color: #857461;
+  white-space: nowrap;
+}
+
+
+/* List of goals */
+.goals-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* One goal row */
+.goal-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: Georgia, serif;
+  font-size: 13px;
+  color: #554536;
+  cursor: pointer;
+}
+
+/* Checkbox appearance */
+.goal-item input[type="checkbox"] {
+  width: 15px;
+  height: 15px;
+  flex-shrink: 0;
+  accent-color: #604a38;
+  cursor: pointer;
+}
+

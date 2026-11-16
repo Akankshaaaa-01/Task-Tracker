@@ -1,0 +1,94 @@
+
+/* Task cards layout */
+.task-list {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 24px;
+}
+
+/* Individual card */
+.task-card {
+  min-width: 0;
+  overflow: hidden;
+  background-color: #fffaf1;
+  border: 1px solid #e5dac8;
+  border-radius: 8px;
+  box-shadow: 0 3px 8px rgba(48, 39, 31, 0.06);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.task-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 7px 16px rgba(48, 39, 31, 0.1);
+}
+
+/* Photo area */
+.task-card-image {
+  position: relative;
+  height: 155px;
+  overflow: hidden;
+  background-color: #605042;
+}
+
+.task-card-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: sepia(25%) saturate(75%);
+}
+
+/* Number on the photo */
+.task-number {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  color: #fff8eb;
+  font-family: Georgia, serif;
+  font-size: 18px;
+  text-shadow: 0 1px 4px #30271f;
+}
+
+/* Card content */
+.task-card-content {
+  padding: 14px;
+}
+
+.task-card-content h3 {
+  min-height: 36px;
+  font-family: Georgia, serif;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 1.4;
+  color: #30271f;
+  overflow-wrap: break-word;
+}
+
+/* Status and checkbox */
+.task-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-top: 12px;
+  color: #827565;
+  font-size: 11px;
+}
+
+.task-check {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+  border: 1px solid #b9aa95;
+  border-radius: 3px;
+  color: #fff8eb;
+}
+
+.task-check.checked {
+  background-color: #605042;
+  border-color: #605042;
+}

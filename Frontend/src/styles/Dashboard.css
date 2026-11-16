@@ -1,0 +1,231 @@
+
+/* Main page */
+.main-content {
+  flex: 1;
+  min-width: 0;
+  padding: 40px;
+}
+
+/* Shared small heading */
+.eyebrow {
+  font-size: 11px;
+  letter-spacing: 2px;
+  color: #8b7965;
+  text-transform: uppercase;
+}
+
+/* Welcome area */
+.welcome-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+}
+
+.welcome-header h2 {
+  margin-top: 14px;
+  font-family: Georgia, serif;
+  font-size: 42px;
+  font-weight: normal;
+  line-height: 1.2;
+  color: #30271f;
+}
+
+.page-description {
+  margin-top: 1px;
+  font-size: 14px;
+  line-height: 1.8;
+  color: #827565;
+}
+
+.welcome-date {
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: #8b7965;
+}
+
+/* Focus banner */
+
+/* Banner: image + date panel */
+.focus-banner {
+  display: flex;
+  height: 180px;
+  margin-top: 24px;
+  overflow: hidden;
+  border-radius: 8px;
+  background-color: #e8dcc8;
+}
+
+.focus-image {
+  position: relative;
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.focus-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: sepia(25%) brightness(75%);
+}
+
+.focus-banner-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 28px;
+  color: #fff8eb;
+}
+
+.focus-banner-overlay p {
+  font-size: 10px;
+  letter-spacing: 2px;
+}
+
+.focus-banner-overlay h2 {
+  max-width: 480px;
+  margin-top: 10px;
+  font-family: Georgia, serif;
+  font-size: 28px;
+  font-weight: normal;
+  line-height: 1.2;
+}
+
+.focus-banner-overlay span {
+  margin-top: 10px;
+  font-size: 12px;
+  color: #f0e3d0;
+}
+
+/* Date panel */
+.focus-date {
+  width: 120px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  padding: 12px;
+  text-align: center;
+  color: #605042;
+  background-color: #eee4d4;
+}
+
+.focus-date p,
+.focus-date h3 {
+  font-family: Georgia, serif;
+  font-weight: normal;
+  font-size: 13px;
+}
+
+.focus-date h3 {
+  margin-bottom: 12px;
+}
+
+.focus-date span {
+  font-size: 9px;
+  letter-spacing: 1.5px;
+}
+
+
+
+
+/* Task section heading */
+.tasks-section {
+  margin-top: 48px;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.section-header h2 {
+  margin-top: 10px;
+  font-family: Georgia, serif;
+  font-size: 30px;
+  font-weight: normal;
+  color: #30271f;
+}
+
+/* Add task button */
+.add-task-button {
+  padding: 12px 18px;
+  border: none;
+  border-radius: 6px;
+  background-color: #605042;
+  color: #fff8eb;
+  font-size: 13px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.add-task-button:hover {
+  background-color: #241d17;
+}
+
+/* Main workspace: task cards + ritual paper */
+.workspace-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 230px;
+  gap: 20px;
+  align-items: start;
+}
+
+.workspace-layout .tasks-section {
+  min-width: 0;
+  margin-top: 0;
+}
+
+.workspace-layout .section-header {
+  margin-bottom: 16px;
+}
+
+.scrapbook-bottom {
+  margin-top: 24px;
+}
+
+/* Simple responsive fallback */
+@media (max-width: 1000px) {
+  .workspace-layout {
+    grid-template-columns: minmax(0, 1fr) 215px;
+    gap: 14px;
+  }
+
+  .main-content {
+    padding: 24px;
+  }
+
+  .workspace-layout .task-list {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 700px) {
+  .workspace-layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .workspace-layout .task-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.scrapbook-bottom {
+  display: grid;
+  grid-template-columns: 1.05fr 0.85fr 1.35fr;
+  gap: 16px;
+  align-items: stretch;
+  margin-top: 28px;
+}
+
+.workspace-left {
+  min-width: 0;
+}

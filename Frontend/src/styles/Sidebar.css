@@ -1,0 +1,57 @@
+
+.sidebar {
+  width: 220px;
+  flex-shrink: 0;
+  padding: 32px 24px;
+  background-color: #30271f;
+  color: #f5ecdc;
+}
+
+.brand h1 {
+  font-family: Georgia, serif;
+  font-size: 36px;
+  font-weight: normal;
+  color: #f5ecdc;
+}
+
+.tagline {
+  margin-top: 12px;
+  font-size: 10px;
+  letter-spacing: 3px;
+  line-height: 1.8;
+  color: #c9bba5;
+}
+
+.navigation {
+  margin-top: 35px;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  width: 100%;
+  margin-top: 2px;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  background-color: transparent;
+  color: #d4c7b4;
+  font-size: 14px;
+  text-align: left;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.nav-item.active {
+  background-color: #514438;
+  color: #fff8eb;
+}
+
+.nav-icon {
+  font-size: 16px;
+}
+
+.nav-item:hover {
+  background-color: #514438;
+}

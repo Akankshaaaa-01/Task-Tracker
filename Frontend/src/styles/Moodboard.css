@@ -1,0 +1,83 @@
+
+/* Main moodboard container */
+.moodboard {
+  padding: 16px;
+  background-color: #f7efdf;
+  border: 1px solid #e5dac8;
+  border-radius: 5px;
+  box-shadow: 0 3px 8px rgba(48, 39, 31, 0.08);
+}
+
+/* Heading, categories and plus button */
+.moodboard-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.moodboard-header h2 {
+  font-family: Georgia, serif;
+  font-size: 18px;
+  font-weight: normal;
+  color: #30271f;
+}
+
+/* Category navigation */
+.moodboard-categories {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.moodboard-categories span {
+  font-family: Georgia, serif;
+  font-size: 9px;
+  letter-spacing: 0.5px;
+  color: #8b7965;
+  cursor: pointer;
+}
+
+.moodboard-categories span.active {
+  color: #30271f;
+  border-bottom: 1px solid #604a38;
+  padding-bottom: 3px;
+}
+
+/* Add button */
+.moodboard-add {
+  border: none;
+  background: transparent;
+  color: #604a38;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+/* Four-image grid */
+.moodboard-images {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 8px;
+}
+
+/* Individual image container */
+.moodboard-image {
+  height: 110px;
+  overflow: hidden;
+  background-color: #e5dac8;
+  border-radius: 3px;
+}
+
+.moodboard-image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  filter: sepia(15%) saturate(80%);
+  transition: transform 0.3s ease;
+}
+
+.moodboard-image:hover img {
+  transform: scale(1.06);
+}
